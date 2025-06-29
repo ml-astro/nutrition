@@ -11,47 +11,48 @@ main {
   flex-wrap: wrap;
 }
 
-body { 
+body {
   background-color: #E0F7FA;
   font-family: Arial, sans-serif;
 }
 
-input, button {
-   width: 100%;
-   margin: 5px 0;
-   padding: 10px;
+input,
+button {
+  width: 100%;
+  margin: 5px 0;
+  padding: 10px;
 }
-
 
 button {
   background-color: #F2C94C;
   border: none;
   border-radius: 5px;
-  font-weight: bold;
   font-size: 120%;
 }
 
+#results table {
+  border-collapse: collapse;
+  margin-top: 15px;
+  width: 100%;
+}
 
-#menuTable {
-   border-collapse: collapse;
-   margin-top: 15px; 
-   width: 100%;
-  }
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 5px;
+}
 
-th, td {
-   border: 1px solid #ccc;
-   padding: 5px 10px; 
-  }
 td {
   text-align: right;
 }
 
-td:first-child, th:first-child{
+td:first-child,
+th:first-child {
   text-align: left;
 }
 
 th {
-   background: #B3EBD5; 
+  background: #B3EBD5;
 }
 
 ul {
@@ -68,7 +69,6 @@ ul#suggestions {
   overflow-y: auto;
   position: absolute;
   z-index: 10;
-  line-height: 1.5;
 }
 
 ul#suggestions li:hover {
@@ -77,70 +77,74 @@ ul#suggestions li:hover {
 
 #remove {
   background-color: coral;
-  cursor:pointer;
+  text-align: center;
+  cursor: pointer;
 }
 
-tr:nth-child(even){
+tr:nth-child(even) {
   background-color: #B3EBD5;
-}
-
-#productinfo {
-  margin-top: 100px;
 }
 
 #search {
   padding: 3px;
   width: 30%;
-  height: 100vh;
   background-color: #B3EBD5;
-  box-sizing: border-box;
+  }
+
+#prodimg {
+  margin: auto;
+  display: block;
 }
 
 #search img {
   width: 100%;
-  margin: auto;
-  max-width: 170px;
   padding: 0 30px;
 }
 
 #results {
   width: 70%;
-  padding: 0 5px;
-  height: 100vh;
-  box-sizing: border-box;
-}
-
-#remove {
-  text-align: center;
+  padding: 0 0 0 15px;
 }
 
 @media screen and (max-width: 480px) {
-  html, body, main{
-    margin: 0; padding: 0; width: 100%;
-    /*overflow-x: hidden !important;*/
-  }
-
-  h2 {
-    font-size: 100%;
-  }
-
-  #search, #results {
+  html,
+  body,
+  main {
     margin: 0;
-    height: auto;
-    padding: 5px;
+    padding: 0;
     width: 100%;
   }
 
-  #infoFlex {
+  h2, button {
+    font-size: 100%;
+  }
+
+  h2 {
+    margin-bottom: 0px;
+  }
+
+  #search,
+  #results {
+    margin: 0;
+    height: auto;
+    padding: 0 0 0 0;
+    width: 100%;
+  }
+
+  #results h2 {
+    padding-left: 0px;
+  }
+
+  #productInfo > div {
     display: flex;
     flex-direction: row;
   }
 
-  #table {
+  #results > div {
     overflow-x: auto;
   }
-  
-  #menuTable {
+
+  #results table {
     table-layout: fixed;
     width: auto;
   }
@@ -149,16 +153,14 @@ tr:nth-child(even){
     line-height: 140%;
     list-style-type: none;
     width: 50%;
-    box-sizing: border-box;
   }
 
-#prodimg {
-  width: 50%;
-  box-sizing: border-box;
-}
+  #prodimg {
+    width: 50%;
+  }
 
-#search img {
-  padding: 0;
-}
+  #search img {
+    padding: 0;
+  }
 
 }
