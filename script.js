@@ -12,7 +12,7 @@ let products = [];
       .then(csvText => {
         const lines = csvText.trim().split('\n');
         products = lines.map(line => {
-          const [name, kcal, prot, fat, carb, fiber] = line.split(',').map(x => x.trim());
+          const [name, kcal, prot, fat, carb, fiber, imgid] = line.split(',').map(x => x.trim());
           return {
             name: name.toLowerCase(),
             displayName: name,
@@ -20,7 +20,8 @@ let products = [];
             prot: parseFloat(prot),
             fat: parseFloat(fat),
             carb: parseFloat(carb),
-            fiber: parseFloat(fiber)
+            fiber: parseFloat(fiber),
+            imgid: imgid,
           };
         });
         })
@@ -54,7 +55,7 @@ let products = [];
       <li>Углеводы: ${(product.carb * factor).toFixed(1)} г</li>
       <li>Клетчатка: ${(product.fiber * factor).toFixed(1)} г</li>
     </ul>
-    <img src="./img/01.webp" />
+    ${product.imgid?'<img src="./img/'+product.imgid+'.webp"/>':''}
     <button onclick='addToMenu(selectedProduct, ${weight})'>Добавить в меню</button>`
 }
 
