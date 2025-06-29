@@ -7,7 +7,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
     <body>
-        <div id="left">
+        <main>
+        <div id="search">
             <h2>Поиск продукта</h2>
             <input type="text" id="searchInput" placeholder="Название продукта" autocomplete="off"/>
             <div style="position: relative;">
@@ -18,8 +19,9 @@
             <div id="productInfo"></div>
         </div>
 
-        <div id="right">
+        <div id="results">
             <h3>Меню</h3>
+            <div id="table">
             <table id="menuTable">
                 <thead>
                     <tr>
@@ -37,7 +39,7 @@
                 <tfoot>
                     <tr>
                         <th>Итог</th>
-                        <th></th>
+                        <th id="totalWeight">0</th>
                         <th id="totalKcal">0</th>
                         <th id="totalProt">0</th>
                         <th id="totalFat">0</th>
@@ -47,8 +49,9 @@
                     </tr>
                 </tfoot>
             </table>
-
+        </div>
             <script src="script.js"></script>
         </div>
+    </main>
     </body>
 </html>

@@ -1,44 +1,76 @@
 * {
   box-sizing: border-box;
-}
-
-html {
-  background-color: rgb(235, 235, 235);
   padding: 0;
 }
+
+main {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 body { 
+  background-color: #E0F7FA;
   font-family: Arial, sans-serif;
 }
+
 input, button {
-   margin: 5px; 
+   width: 100%;
+   margin: 5px 0;
+   padding: 10px;
 }
-table {
-   border-collapse: collapse; margin-top: 15px; 
+
+
+button {
+  background-color: #F2C94C;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 120%;
+}
+
+
+#menuTable {
+   border-collapse: collapse;
+   margin-top: 15px; 
+   width: 100%;
   }
+
 th, td {
-   border: 1px solid #ccc; padding: 5px 10px; 
+   border: 1px solid #ccc;
+   padding: 5px 10px; 
   }
 td {
   text-align: right;
 }
-th {
-   background: #f0f0f0; 
+
+td:first-child, th:first-child{
+  text-align: left;
 }
+
+th {
+   background: #B3EBD5; 
+}
+
+ul {
+  list-style-type: none;
+  line-height: 140%;
+}
+
 ul#suggestions {
-  list-style: none;
   padding: 0;
   margin: 0;
+  width: 100%;
   background-color: white;
-  max-height: 150px;
+  max-height: 200px;
   overflow-y: auto;
-  width: 300px;
   position: absolute;
   z-index: 10;
+  line-height: 1.5;
 }
-ul#suggestions li {
-  padding: 5px;
-  cursor: pointer;
-}
+
 ul#suggestions li:hover {
   background-color: #eee;
 }
@@ -49,32 +81,33 @@ ul#suggestions li:hover {
 }
 
 tr:nth-child(even){
-  background-color: ghostwhite;
+  background-color: #B3EBD5;
 }
 
 #productinfo {
   margin-top: 100px;
 }
 
-#left {
-  width: 20%;
+#search {
+  padding: 3px;
+  width: 30%;
   height: 100vh;
-  background-color: bisque;
-  margin: 0 20px 0 0;
-  padding: 20px;
-  display: inline-block;
+  background-color: #B3EBD5;
+  box-sizing: border-box;
 }
 
-#left img {
+#search img {
   width: 100%;
+  margin: auto;
+  max-width: 170px;
+  padding: 0 30px;
 }
 
-#right {
-  margin: 20px;
+#results {
+  width: 70%;
+  padding: 0 5px;
   height: 100vh;
-  position: absolute;
-  left: 25%;
-  display: inline-block;
+  box-sizing: border-box;
 }
 
 #remove {
@@ -82,61 +115,50 @@ tr:nth-child(even){
 }
 
 @media screen and (max-width: 480px) {
-  html, body{
+  html, body, main{
     margin: 0; padding: 0; width: 100%;
-    height: 100%;
-    overflow-x: hidden !important;
+    /*overflow-x: hidden !important;*/
   }
 
   h2 {
     font-size: 100%;
   }
 
-  #left, #right {
-    position: relative;
+  #search, #results {
     margin: 0;
-    left: 0;
     height: auto;
     padding: 5px;
     width: 100%;
   }
 
-#productinfo img {
-  position: absolute;
-  right: 0;
-  width: 50%;
-}
+  #infoFlex {
+    display: flex;
+    flex-direction: row;
+  }
 
-  #menuTable {
-    table-layout: fixed;
-    width: 100%;
+  #table {
+    overflow-x: auto;
   }
   
+  #menuTable {
+    table-layout: fixed;
+    width: auto;
+  }
+
   ul {
-    margin-top: 0px;
+    line-height: 140%;
     list-style-type: none;
-    padding-left: 5px;
-  }
-
-  ul, #prodimg {
-    display: inline-block;
     width: 50%;
-    line-height: 2;
+    box-sizing: border-box;
   }
 
-  td:first-child {
-    width: 10px;
-  }
+#prodimg {
+  width: 50%;
+  box-sizing: border-box;
+}
 
-  #prodimg {
-    display: inline-block;
-    width: 45%;
-    position: absolute;
-    max-width: 170px;
-  }
+#search img {
+  padding: 0;
+}
 
-  #productInfo button {
-    width: 100%;
-    margin: 0;
-  }
 }

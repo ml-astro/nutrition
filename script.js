@@ -48,17 +48,19 @@ let products = [];
   selectedProduct = product;
   const factor = weight / 100;
   container.innerHTML = `
-    <p><strong>${product.displayName}</strong></p> <button onclick='addToMenu(selectedProduct, ${weight})'>Добавить в меню</button>
-    <p>На ${weight} г:</p>
-    <ul>
-      <li>Калории: ${(product.kcal * factor).toFixed(1)}</li>
-      <li>Белки: ${(product.prot * factor).toFixed(1)} г</li>
-      <li>Жиры: ${(product.fat * factor).toFixed(1)} г</li>
-      <li>Углеводы: ${(product.carb * factor).toFixed(1)} г</li>
-      <li>Клетчатка: ${(product.fiber * factor).toFixed(1)} г</li>
-    </ul>
-    ${product.imgid?'<div id="prodimg"><img src="./img/'+product.imgid+'.webp"/></div>':''}
-    <button onclick='addToMenu(selectedProduct, ${weight})'>Добавить в меню</button>`
+  <p><strong>${product.displayName}</strong></p>
+  <div id="infoFlex">
+  <ul>
+  <li>Вес ${parseInt(weight)} г</li>
+  <li>Калории: ${(product.kcal * factor).toFixed(1)}</li>
+  <li>Белки: ${(product.prot * factor).toFixed(1)} г</li>
+  <li>Жиры: ${(product.fat * factor).toFixed(1)} г</li>
+  <li>Углеводы: ${(product.carb * factor).toFixed(1)} г</li>
+  <li>Клетчатка: ${(product.fiber * factor).toFixed(1)} г</li>
+  </ul>
+  ${product.imgid?'<div id="prodimg"><img src="./img/'+product.imgid+'.webp"/></div>':''}
+  </div>
+  <button onclick='addToMenu(selectedProduct, ${weight})'>Добавить в меню</button>`
 }
 
 
@@ -69,7 +71,7 @@ let products = [];
 
   row.innerHTML = `
     <td>${product.displayName}</td>
-    <td>${weight}</td>
+    <td>${parseInt(weight)}</td>
     <td>${(product.kcal * factor).toFixed(1)}</td>
     <td>${(product.prot * factor).toFixed(1)}</td>
     <td>${(product.fat * factor).toFixed(1)}</td>
@@ -90,15 +92,16 @@ let products = [];
   }
 
   function updateTotals() {
-    let kcal = 0, prot = 0, fat = 0, carb = 0, fiber = 0;
+    let weight =0, kcal = 0, prot = 0, fat = 0, carb = 0, fiber = 0;
     document.querySelectorAll('#menuTable tbody tr').forEach(row => {
+      weight += parseInt(row.cells[1].textContent);
       kcal += parseFloat(row.cells[2].textContent);
       prot += parseFloat(row.cells[3].textContent);
       fat  += parseFloat(row.cells[4].textContent);
       carb += parseFloat(row.cells[5].textContent);
       fiber+= parseFloat(row.cells[6].textContent);
     });
-
+    document.getElementById('totalWeight').textContent = parseInt(weight);
     document.getElementById('totalKcal').textContent = kcal.toFixed(1);
     document.getElementById('totalProt').textContent = prot.toFixed(1);
     document.getElementById('totalFat').textContent = fat.toFixed(1);
