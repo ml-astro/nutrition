@@ -43,10 +43,12 @@ let products = [];
     return;
   }
 
+/* текст в кнопке - добавлено */
+
   selectedProduct = product;
   const factor = weight / 100;
   container.innerHTML = `
-    <p><strong>${product.displayName}</strong></p>
+    <p><strong>${product.displayName}</strong></p> <button onclick='addToMenu(selectedProduct, ${weight})'>Добавить в меню</button>
     <p>На ${weight} г:</p>
     <ul>
       <li>Калории: ${(product.kcal * factor).toFixed(1)}</li>
@@ -55,7 +57,7 @@ let products = [];
       <li>Углеводы: ${(product.carb * factor).toFixed(1)} г</li>
       <li>Клетчатка: ${(product.fiber * factor).toFixed(1)} г</li>
     </ul>
-    ${product.imgid?'<img src="./img/'+product.imgid+'.webp"/>':''}
+    ${product.imgid?'<div id="prodimg"><img src="./img/'+product.imgid+'.webp"/></div>':''}
     <button onclick='addToMenu(selectedProduct, ${weight})'>Добавить в меню</button>`
 }
 
@@ -73,7 +75,7 @@ let products = [];
     <td>${(product.fat * factor).toFixed(1)}</td>
     <td>${(product.carb * factor).toFixed(1)}</td>
     <td>${(product.fiber * factor).toFixed(1)}</td>
-    <td id="remove" onclick="removeRow(this)">Удалить</td>
+    <td id="remove" onclick="removeRow(this)">Х</td>
   `;
 
   table.appendChild(row);

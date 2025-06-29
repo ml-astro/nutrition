@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>Калькулятор БЖУ</title>
         <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
     <body>
         <div id="left">
@@ -13,7 +14,7 @@
                 <ul id="suggestions"></ul>
             </div>
             <input type="number" id="weightInput" placeholder="Вес в граммах" value="100"/>
-            <button onclick="searchProduct()">Поиск</button>
+            <button onclick="searchProduct()">Найти</button>
             <div id="productInfo"></div>
         </div>
 
@@ -22,20 +23,20 @@
             <table id="menuTable">
                 <thead>
                     <tr>
-                        <th>Продукт</th>
-                        <th>Вес (г)</th>
-                        <th>Калории</th>
-                        <th>Белки</th>
-                        <th>Жиры</th>
-                        <th>Углеводы</th>
-                        <th>Клетчатка</th>
+                        <th>Прод</th>
+                        <th>гр</th>
+                        <th>кКал</th>
+                        <th>Б</th>
+                        <th>Ж</th>
+                        <th>У</th>
+                        <th>Кл</th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody></tbody>
                 <tfoot>
                     <tr>
-                        <th>Итого</th>
+                        <th>Итог</th>
                         <th></th>
                         <th id="totalKcal">0</th>
                         <th id="totalProt">0</th>
