@@ -106,13 +106,24 @@ tr:nth-child(even) {
   padding: 0 0 0 15px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 920px){
+  main {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 640px) {
   html,
   body,
   main {
     margin: 0;
     padding: 0;
     width: 100%;
+  }
+
+  main {
+    max-width: 400px;
+    margin: 0 auto;
   }
 
   h2, button {
