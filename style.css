@@ -101,6 +101,22 @@ tr:nth-child(even) {
   padding: 0 30px;
 }
 
+#search .button {
+  display: block;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  margin: 5px auto 15px auto;
+  background-color: #F2C94C;
+  border-radius: 45%;
+}
+
+#remove img {
+  width: 1em;
+  height: 1em;
+  margin: 0;
+}
+
 #results {
   width: 70%;
   padding: 0 0 0 15px;

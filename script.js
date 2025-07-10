@@ -60,7 +60,8 @@ function searchProduct() {
   </ul>
   ${product.imgid ? '<div id="prodimg"><img src="./img/' + product.imgid + '.webp"/></div>' : ''}
   </div>
-  <button onclick='addToMenu(selectedProduct, ${weight})'>Добавить в меню</button>`
+  <div onclick='addToMenu(selectedProduct, ${weight})'><img src="./img/add.png" class="button" alt="найти"></div>`
+  //<button onclick='addToMenu(selectedProduct, ${weight})'>Добавить в меню</button>
 }
 
 
@@ -77,7 +78,7 @@ function addToMenu(product, weight) {
     <td>${(product.fat * factor).toFixed(1)}</td>
     <td>${(product.carb * factor).toFixed(1)}</td>
     <td>${(product.fiber * factor).toFixed(1)}</td>
-    <td id="remove" onclick="removeRow(this)">Х</td>
+    <td id="remove" onclick="removeRow(this)"><img src="./img/remove.png" alt="удалить"></td>
   `;
   document.querySelector('#searchInput').value = '';
   document.querySelector('#weightInput').value = '100';
