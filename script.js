@@ -58,10 +58,10 @@ function searchProduct() {
   <li>Углеводы: ${(product.carb * factor).toFixed(1)} г</li>
   <li>Клетчатка: ${(product.fiber * factor).toFixed(1)} г</li>
   </ul>
-  ${product.imgid ? '<div id="prodimg"><img src="./img/' + product.imgid + '.webp"/></div>' : ''}
+  ${product.imgid ? '<div id="prodimg"><img src="./img/' + product.imgid + '.jpg"/></div>' : ''}
   </div>
-  <div onclick='addToMenu(selectedProduct, ${weight})'><img src="./img/add.png" class="button" alt="найти"></div>`
-  //<button onclick='addToMenu(selectedProduct, ${weight})'>Добавить в меню</button>
+  <button onclick='addToMenu(selectedProduct, ${weight})'>Добавить в меню</button>`
+  //<div onclick='addToMenu(selectedProduct, ${weight})'><img src="./img/add.png" class="button" alt="найти"></div>
 }
 
 
