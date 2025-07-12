@@ -122,6 +122,14 @@ tr:nth-child(even) {
   padding: 0 0 0 15px;
 }
 
+.button:hover, button:hover {
+  cursor: pointer;
+}
+
+button:active {
+  box-shadow: 0px 0px 8px 4px #f7cd4f;
+}
+
 @media screen and (max-width: 920px){
   main {
     width: 100%;
