@@ -68,16 +68,16 @@
 Скир безвкусный Farmi,65,11,0.5,4,0,skyrMaitsestamata
 Скир персиковый Farmi,83,10,0.2,10,0,skyrVirsiku
 Свинина вырезка,176,20.7,10.3,0,0
-Гречка Tartu,344,8.9,1.5,72.6,3.2
+Гречка Tartu,344,8.9,1.5,72.6,3.2,tatar
 Сельдь,170,18,12,0,0
 Семена льна,534,18,42,30,27
 Семена чиа,430,20,31,2,32
 Скумбрия,202,19,12,0,0
 Сливки 20%,213,2.8,20,3.8,0
-Смесь Rukkikama Tartu mill,340,10,1.7,63.5,15.1
-Цельнозер. макароны Fusilli Tartu,353,12,3.3,63.8
-Цельнозер. овсянка Tartu,359,14.1,7,54.1,11.8
-Смесь 4 зерновых Tartu mill,344,10,3,63,12.5
+Смесь Rukkikama Tartu mill,340,10,1.7,63.5,15.1,rukkikama
+Цельнозер. макароны Fusilli Tartu,353,12,3.3,63.8,taistera_fusilli
+Цельнозер. овсянка Tartu,359,14.1,7,54.1,11.8,taistera_jamedad_kaerahelbed
+Смесь 4 зерновых Tartu mill,344,10,3,63,12.5,taistera4viljahelbed
 Соус Arrabbiata,50,1.8,3.7,2.0,0.7,arrabbiata
 Соус томат базилик Tartu mill,64,1.3,3.9,4.5,2.7,kaste_tomat_basiilik
 Соус томат сыр Tartu mill,95,4,7.2,4.8,0.8,kaste_tomat_juust
@@ -90,11 +90,11 @@
 Творог обезжиренный ваниль Tere,115,15,0.1,14,0
 Творог Saaremaa 5%,105,11,5,4,0
 Творог Tere 5%,116,14,5,3.6,0
-Творог Liisu,177,20,9,4,0
+Творог Liisu,177,20,9,4,0,kohupiim_liisu9
 Сосиски,220,12,17,4,0
 Сушки,331,11,1.3,69,0
-Крем Profeel,71,10,0.5,6.5,0
-Крем Profeel ваниль,68,10,0.5,5.8,0
+Крем Profeel,71,10,0.5,6.5,0,prot_kohupiimakr_maas_ban_valio_profeel
+Крем Profeel ваниль,68,10,0.5,5.8,0,prot_kohupiimakr_vanilli_valio_profeel
 Творог 9%,177,20,9,4,0
 Творог Alma,109,13,5,3,0,kodujuust_alma5
 Творог классический Otto,105,12,5,2.2,0
